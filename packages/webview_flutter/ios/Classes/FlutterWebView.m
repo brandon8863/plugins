@@ -79,6 +79,11 @@
     if ([initialUrl isKindOfClass:[NSString class]]) {
       [self loadUrl:initialUrl];
     }
+
+    NSString* scaleFactor = args[@"scaleFactor"];
+    if ([scaleFactor isKindOfClass:[NSString class]]) {
+      _webView.contentScaleFactor = [scaleFactor floatValue];
+    }
   }
   return self;
 }
